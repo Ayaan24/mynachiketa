@@ -1,0 +1,26 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.home-heading{
+    color: antiquewhite;
+}
+body{
+    background-color: black;
+}
+nav{
+    text-decoration: none;
+}
+.links{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+.links:hover{
+    color: aliceblue;
+}
+p{
+    color: white;
+}

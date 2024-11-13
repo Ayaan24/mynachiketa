@@ -2,17 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
 import Profile from './components/Profile';
 import Leaderboards from './components/Leaderboards';
+import './App.css'
 import Tournaments from './components/Tournaments';
 
 function App() {
   return (
     <Router>
-      <div>
-        <h1>Lichess Explorer</h1>
+      <div className="home">
+        <h1 className='home-heading'>Lichess Explorer</h1>
         <nav>
-          <Link to="/profile">Profile</Link> | 
-          <Link to="/leaderboards">Leaderboards</Link> | 
-          <Link to="/tournaments">Tournaments</Link>
+          <Link className='links' to="/profile">Profile</Link> | 
+          <Link className='links' to="/leaderboards">Leaderboards</Link> | 
+          <Link  className='links' to="/tournaments">Tournaments</Link>
         </nav>
         <Routes>
           <Route path="/profile" element={<Profile />} />
