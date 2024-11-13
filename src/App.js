@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
+import Profile from './components/Profile';
+import Leaderboards from './components/Leaderboards';
+import Tournaments from './components/Tournaments';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>Lichess Explorer</h1>
+        <nav>
+          <Link to="/profile">Profile</Link> | 
+          <Link to="/leaderboards">Leaderboards</Link> | 
+          <Link to="/tournaments">Tournaments</Link>
+        </nav>
+        <Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/leaderboards" element={<Leaderboards />} />
+          <Route path="/tournaments" element={<Tournaments />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
